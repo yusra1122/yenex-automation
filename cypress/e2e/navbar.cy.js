@@ -1,5 +1,8 @@
 import { LoginPage } from "./pages/loginpage";
+import { faker } from "@faker-js/faker";
+
 const loginPage = new LoginPage();
+const country = faker.location.country()
 
 it('Navbar', () => {
     cy.visit("https://yenex.com/account/login") 
@@ -21,7 +24,7 @@ cy.get('a[href="/community/map"]', { multiple: true }).eq(0) .click();
 // Browse System list View
 cy.get('button[type="button"]').contains('List View').click();
 
-// cy.get('[placeholder="Search"]').type('Canada'); //Search field
+cy.get('[placeholder="Search"]').type(country); //Search field
 
 // Randomly select option from All Time Sort
 cy.get('.ant-select-selector').eq(1).click();
