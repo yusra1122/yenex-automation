@@ -1,3 +1,4 @@
+//navbar links check + community mao and list view filters check
 import { LoginPage } from "./pages/loginpage";
 import { faker } from "@faker-js/faker";
 
